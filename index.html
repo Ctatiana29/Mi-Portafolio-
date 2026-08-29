@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Profesional</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navegación -->
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">PORTAFOLIO</a>
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Cambiar tema">☀️</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="hero-content fade-in">
+      <h1>Hola, soy <span>Tatiana Cáceres</span></h1>
+      <p class="subtitle">Desarrolladora Web & Ingeniera</p>
+      <a href="#proyectos" class="btn">Ver Proyectos</a>
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="sobre-mi" class="section fade-in-scroll">
+    <div class="container sobre-mi-grid">
+      <h2>Sobre mí</h2>
+      <div class="sobre-mi-texto">
+        <p>Especializada en el desarrollo web moderno, arquitectura de software y diseño de experiencias digitales. Combinando precisión técnica con un enfoque estético limpio, profesional y funcional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos" class="section section-dark fade-in-scroll">
+    <div class="container">
+      <h2 class="section-title-light">Mis Proyectos</h2>
+      <div class="projects-grid">
+        
+        <!-- Proyecto 1: Tienda de Café -->
+        <article class="project-card">
+          <div class="card-body">
+            <span class="project-tag">E-Commerce / Web App</span>
+            <h3>Tienda de Café</h3>
+            <p>Landing page web interactiva y responsiva desarrollada para la presentación de marca, catálogo de productos e interfaz orientada a una navegación fluida.</p>
+            <!-- Reemplaza el enlace de 'href' por la URL real de tu repositorio en GitHub -->
+            <a href="https://github.com/Ctatiana29/pagina-de-hamburguesa" target="_blank" rel="noopener noreferrer" class="project-link">
+              Ver más en GitHub <span class="arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Proyecto 2 -->
+        <article class="project-card">
+          <div class="card-body">
+            <span class="project-tag">Frontend </span>
+            <h3>Dashboard</h3>
+            <p>Aplicación web interactiva para el seguimiento de métricas financieras diarias y la administración de transacciones contables. Cuenta con una interfaz intuitiva con barra lateral de navegación, métricas resumidas en tarjetas con estados visuales y una tabla detallada de movimientos financieros.</p>
+            <a href="https://github.com/Ctatiana29/Dashboard" target="_blank" rel="noopener noreferrer" class="project-link">
+              Ver más en GitHub <span class="arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Proyecto 3 -->
+        <article class="project-card">
+          <div class="card-body">
+            <span class="project-tag">UI/UX / Mobile Web</span>
+            <h3>WeatherDash</h3>
+            <p>Aplicación web responsive que consume una API pública para consultar y mostrar condiciones meteorológicas actuales y pronósticos por ciudad, integrando alertas visuales según la temperatura.</p>
+            <a href="https://github.com/tu-usuario/proyecto-03" target="_blank" rel="noopener noreferrer" class="project-link">
+              Ver más en GitHub <span class="arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section fade-in-scroll">
+    <div class="container contact-container">
+      <h2>Contacto</h2>
+      <form class="contact-form" id="contact-form">
+        <div class="input-group">
+          <input type="text" id="name" required placeholder=" ">
+          <label for="name">Nombre</label>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" required placeholder=" ">
+          <label for="email">Correo Electrónico</label>
+        </div>
+        <div class="input-group">
+          <textarea id="message" rows="4" required placeholder=" "></textarea>
+          <label for="message">Mensaje</label>
+        </div>
+        <button type="submit" class="btn btn-submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Tatiana Cáceres. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
