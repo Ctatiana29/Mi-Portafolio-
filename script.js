@@ -1,39 +1,30 @@
-// Toggle para Modo Oscuro / Claro
-const themeToggle = document.getElementById('theme-toggle');
 
-themeToggle.addEventListener('click', () => {
-  const currentTheme = document.body.getAttribute('data-theme');
-  if (currentTheme === 'dark') {
-    document.body.removeAttribute('data-theme');
-    themeToggle.textContent = '☀️';
-  } else {
-    document.body.setAttribute('data-theme', 'dark');
-    themeToggle.textContent = '🌙';
-  }
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+// Abrir y cerrar el menú en dispositivos móviles
+menuToggle.addEventListener("click", () => {
+  const abierto = navLinks.classList.toggle("open");
+
+  menuToggle.setAttribute("aria-expanded", String(abierto));
+  menuToggle.setAttribute(
+    "aria-label",
+    abierto ? "Cerrar menú" : "Abrir menú"
+  );
+
+  menuToggle.textContent = abierto ? "✕" : "☰";
 });
 
-// Animación al hacer Scroll (Intersection Observer)
-const observerOptions = {
-  threshold: 0.15
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+// Cerrar el menú al seleccionar una sección
+navLinks.querySelectorAll("a").forEach((enlace) => {
+  enlace.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Abrir menú");
+    menuToggle.textContent = "☰";
   });
-}, observerOptions);
-
-document.querySelectorAll('.fade-in-scroll').forEach(section => {
-  observer.observe(section);
 });
 
-// Manejo del Formulario de Contacto
-const contactForm = document.getElementById('contact-form');
-
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  alert('Mensaje enviado con éxito. Me pondré en contacto contigo a la brevedad.');
-  contactForm.reset();
-});
+// Actualizar automáticamente el año
+document.getElementById("year").textContent =
+  new Date().getFullYear();

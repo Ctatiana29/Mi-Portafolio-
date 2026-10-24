@@ -1,127 +1,238 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Profesional</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Portafolio profesional de Tatiana Cáceres.">
+  <title>Tatiana Cáceres | Portafolio profesional</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <!-- Navegación -->
-  <header>
-    <nav class="navbar">
-      <a href="#" class="logo">PORTAFOLIO</a>
-      <ul class="nav-links">
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <button id="theme-toggle" aria-label="Cambiar tema">☀️</button>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#inicio" class="logo">Tatiana<span>.</span></a>
+
+      <button class="menu-toggle" id="menu-toggle"
+        aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto" class="nav-contact">Contacto</a>
+      </div>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-    </div>
-    <div class="hero-content fade-in">
-      <h1>Hola, soy <span>Tatiana Cáceres</span></h1>
-      <p class="subtitle">Desarrolladora Web & Ingeniera</p>
-      <a href="#proyectos" class="btn">Ver Proyectos</a>
-    </div>
-  </section>
+  <main>
+    <!-- PRESENTACIÓN -->
+    <section class="hero container" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">Portafolio profesional</p>
 
-  <!-- Sobre mí -->
-  <section id="sobre-mi" class="section fade-in-scroll">
-    <div class="container sobre-mi-grid">
+        <h1>Hola, soy <span>Tatiana Cáceres</span></h1>
+
+        <h2>Ingeniería en Computación | Tecnología y desarrollo</h2>
+
+        <p class="description">
+          Me interesa desarrollar soluciones tecnológicas, crear
+          interfaces intuitivas y resolver problemas mediante la
+          programación. Busco oportunidades para aplicar mis
+          conocimientos, colaborar en proyectos reales y continuar
+          creciendo profesionalmente.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#proyectos" class="btn btn-primary">
+            Ver mis proyectos
+          </a>
+
+          
+<!-- Botón para abrir el CV en otra pestaña -->
+<a
+  href="CV_Ingenieria_Cibernetica_Electronica.pdf"
+  class="btn"
+  target="_blank"
+  rel="noopener noreferrer">
+  Ver mi CV ↗
+</a>
+
+<!-- Botón para descargar el CV -->
+<a
+  href="CV_Ingenieria_Cibernetica_Electronica.pdf"
+  class="btn btn-primary"
+  download="CV_Tatiana_Caceres.pdf">
+  Descargar mi CV ↓
+</a>
+
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="avatar">TC</div>
+        <h3>Tatiana Cáceres</h3>
+        <p>Profesional del área tecnológica</p>
+        <div class="tags">
+          <span>Desarrollo web</span>
+          <span>UX/UI</span>
+          <span>Redes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="section container" id="sobre-mi">
+      <p class="eyebrow">Conóceme</p>
       <h2>Sobre mí</h2>
-      <div class="sobre-mi-texto">
-        <p>Especializada en el desarrollo web moderno, arquitectura de software y diseño de experiencias digitales. Combinando precisión técnica con un enfoque estético limpio, profesional y funcional.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Proyectos -->
-  <section id="proyectos" class="section section-dark fade-in-scroll">
-    <div class="container">
-      <h2 class="section-title-light">Mis Proyectos</h2>
+      <div class="info-card">
+        <p>
+          Cuento con formación en Ingeniería en Computación y
+          conocimientos adquiridos mediante proyectos académicos
+          y prácticas tecnológicas. Me caracterizo por mi disposición
+          para aprender, la resolución de problemas y el interés
+          por desarrollar soluciones funcionales.
+        </p>
+
+        <p>
+          Mi objetivo es incorporarme a un equipo donde pueda aportar
+          mis conocimientos, adquirir experiencia profesional y
+          contribuir al desarrollo de proyectos tecnológicos.
+        </p>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="section container" id="habilidades">
+      <p class="eyebrow">Lo que conozco</p>
+      <h2>Habilidades técnicas</h2>
+
+      <div class="skills-grid">
+        <article class="info-card">
+          <h3>Desarrollo web</h3>
+          <p>HTML, CSS, JavaScript y Node.js</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Herramientas</h3>
+          <p>Git, GitHub y Visual Studio Code</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Redes y seguridad</h3>
+          <p>TCP/IP, configuración de redes y Cisco Packet Tracer</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Diseño de interfaces</h3>
+          <p>Principios UX/UI y diseño responsivo</p>
+        </article>
+      </div>
+
+      <p class="hint">
+        Personaliza esta sección: conserva únicamente las tecnologías
+        que realmente conoces y puedes explicar en una entrevista.
+      </p>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="section container" id="proyectos">
+      <p class="eyebrow">Mi trabajo</p>
+      <h2>Proyectos destacados</h2>
+
       <div class="projects-grid">
-        
-        <!-- Proyecto 1: Tienda de Café -->
         <article class="project-card">
-          <div class="card-body">
-            <span class="project-tag">E-Commerce / Web App</span>
-            <h3>Tienda de Café</h3>
-            <p>Landing page web interactiva y responsiva desarrollada para la presentación de marca, catálogo de productos e interfaz orientada a una navegación fluida.</p>
-            <!-- Reemplaza el enlace de 'href' por la URL real de tu repositorio en GitHub -->
-            <a href="https://github.com/Ctatiana29/pagina-de-hamburguesa" target="_blank" rel="noopener noreferrer" class="project-link">
-              Ver más en GitHub <span class="arrow">→</span>
-            </a>
-          </div>
+          <div class="project-number">01</div>
+          <h3>Portafolio web</h3>
+          <p>
+            Sitio web personal para presentar mi perfil profesional,
+            habilidades, proyectos y medios de contacto.
+          </p>
+          <p class="tech">HTML · CSS · JavaScript</p>
+          <a href="https://github.com/ctatiana29"
+             target="_blank" rel="noopener noreferrer">
+            Ver mi GitHub ↗
+          </a>
         </article>
 
-        <!-- Proyecto 2 -->
         <article class="project-card">
-          <div class="card-body">
-            <span class="project-tag">Frontend </span>
-            <h3>Dashboard</h3>
-            <p>Aplicación web interactiva para el seguimiento de métricas financieras diarias y la administración de transacciones contables. Cuenta con una interfaz intuitiva con barra lateral de navegación, métricas resumidas en tarjetas con estados visuales y una tabla detallada de movimientos financieros.</p>
-            <a href="https://github.com/Ctatiana29/Dashboard" target="_blank" rel="noopener noreferrer" class="project-link">
-              Ver más en GitHub <span class="arrow">→</span>
-            </a>
-          </div>
+          <div class="project-number">02</div>
+          <h3>Modernización de un módulo académico</h3>
+          <p>
+            Propuesta de mejora de la interfaz de un sistema
+            académico para facilitar la navegación y la consulta
+            de información de docentes.
+          </p>
+          <p class="tech">UX/UI · Diseño de interfaces</p>
+          <a href="https://github.com/ctatiana29"
+             target="_blank" rel="noopener noreferrer">
+            Ver proyectos en GitHub ↗
+          </a>
         </article>
 
-        <!-- Proyecto 3 -->
         <article class="project-card">
-          <div class="card-body">
-            <span class="project-tag">UI/UX / Mobile Web</span>
-            <h3>WeatherDash</h3>
-            <p>Aplicación web responsive que consume una API pública para consultar y mostrar condiciones meteorológicas actuales y pronósticos por ciudad, integrando alertas visuales según la temperatura.</p>
-            <a href="https://github.com/tu-usuario/proyecto-03" target="_blank" rel="noopener noreferrer" class="project-link">
-              Ver más en GitHub <span class="arrow">→</span>
-            </a>
-          </div>
+          <div class="project-number">03</div>
+          <h3>Práctica de redes</h3>
+          <p>
+            Documentación de una topología de red, configuración
+            de dispositivos y pruebas de conectividad.
+          </p>
+          <p class="tech">Redes · Cisco Packet Tracer</p>
+          <a href="#contacto">Consultar proyecto ↗</a>
         </article>
-
       </div>
-    </div>
-  </section>
 
-  <!-- Contacto -->
-  <section id="contacto" class="section fade-in-scroll">
-    <div class="container contact-container">
-      <h2>Contacto</h2>
-      <form class="contact-form" id="contact-form">
-        <div class="input-group">
-          <input type="text" id="name" required placeholder=" ">
-          <label for="name">Nombre</label>
-        </div>
-        <div class="input-group">
-          <input type="email" id="email" required placeholder=" ">
-          <label for="email">Correo Electrónico</label>
-        </div>
-        <div class="input-group">
-          <textarea id="message" rows="4" required placeholder=" "></textarea>
-          <label for="message">Mensaje</label>
-        </div>
-        <button type="submit" class="btn btn-submit">Enviar Mensaje</button>
-      </form>
-    </div>
-  </section>
+      <p class="hint">
+        Estos proyectos son ejemplos de presentación. Sustitúyelos
+        por tus trabajos reales, sus resultados y enlaces directos.
+      </p>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Tatiana Cáceres. Todos los derechos reservados.</p>
+    <!-- CONTACTO -->
+    <section class="section container" id="contacto">
+      <div class="contact-panel">
+        <p class="eyebrow">Hablemos</p>
+        <h2>¿Tienes una oportunidad para mí?</h2>
+        <p>
+          Estoy interesada en oportunidades profesionales en el
+          sector tecnológico. Si mi perfil se ajusta a una vacante,
+          estaré encantada de conversar contigo.
+        </p>
+
+        <!-- REEMPLAZA este correo por tu correo real -->
+        <a class="btn btn-primary"
+           href="mailto:TU_CORREO@gmail.com?subject=Oportunidad%20laboral">
+          Enviarme un correo ↗
+        </a>
+
+        <div class="social-links">
+          <a href="https://github.com/ctatiana29"
+             target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+
+          <!-- Reemplaza por la URL de tu perfil personal -->
+          <a href="https://www.linkedin.com/"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </div>
+
+        <p class="email-text">cacerestatiana2905@gmail.com</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Tatiana Cáceres · Portafolio profesional</p>
+    <a href="#inicio">Volver arriba ↑</a>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
