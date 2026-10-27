@@ -184,17 +184,20 @@ a {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
-.avatar {
-  width: 95px;
-  height: 95px;
-  margin: 0 auto 20px;
-  border-radius: 28px;
-  display: grid;
-  place-items: center;
-  color: #081321;
-  font-size: 2rem;
-  font-weight: 900;
-  background: linear-gradient(135deg, var(--blue), var(--green));
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 24px;
+    border-radius: 30px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #83a5ff, #73ddc6);
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .profile-card h3 {
